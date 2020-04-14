@@ -1,0 +1,24 @@
+#include<stdio.h>
+int produsul_cifrelor(int x)
+{
+	int c,p;
+	p=1;
+	while(x!=0)
+	{
+		c=x%10;
+		p=p*c;
+		x=x/10;
+	}
+	return p;
+}
+int main(void)
+{
+	int a,b,p;
+	printf("primul numar : ");
+	scanf("%d",&a);
+	printf("al doilea numar : ");
+	scanf("%d",&b);
+	p= produsul_cifrelor(a)* produsul_cifrelor(b);
+	printf("produsul cifrelor numerelor este %d ",p);
+	return 0;
+}
